@@ -1,0 +1,81 @@
+---
+title: "Plano de Ensino"
+subtitle: "Nome da Disciplina"
+institute: "Instituição"
+author: "Prof. Nome do Docente"
+format: 
+  revealjs:
+    theme: [default, ../TemaModelo.scss] 
+    self-contained: true
+    transition: slide
+    slide-number: true
+    width: 1600 
+    height: 900
+    footer: " "
+    center: true
+    title-slide-attributes:
+      data-background-image: "imgs/Logo.png"
+      data-background-size: "100px"
+      data-background-position: "top 40px center"
+---
+
+## Identificação
+
+::: {.columns}
+::: {.column width="50%"}
+
+- Curso / nível
+- Carga horária: 00 horas
+- Pré-requisitos: ...
+- Ferramentas: ...
+
+:::
+::: {.column width="50%"}
+
+**Ementa:** descreva aqui os grandes temas da disciplina em um parágrafo.
+
+:::
+:::
+
+---
+
+## Objetivos
+
+- Objetivo geral da disciplina.
+- Competência 1.
+- Competência 2.
+- Competência 3.
+
+::: {.callout-note}
+Use callouts com moderação para destacar a intenção pedagógica de cada unidade.
+:::
+
+---
+
+## Bibliografia
+
+- **Livro 1**: AUTOR, A. *Título*. Edição. Editora, ano.
+- **Livro 2**: AUTOR, B. *Título*. Edição. Editora, ano.
+- **Livro 3**: AUTOR, C. *Título*. Edição. Editora, ano.
+
+---
+
+## Avaliação
+
+- **Avaliação 1** — peso: descrição;
+- **Avaliação 2** — peso: descrição;
+- **Trabalho/Projeto** — peso: descrição.
+
+$$N_f = \text{(fórmula da nota final)}$$
+
+---
+
+## Cronograma
+
+| Semanas | Conteúdo |
+|:--:|:--|
+| 1–2 | Unidade I |
+| 3–5 | Unidade II |
+| 6 | Avaliação 1 |
+| 7–10 | Unidade III |
+| ... | ... |

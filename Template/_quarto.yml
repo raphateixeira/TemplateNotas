@@ -1,0 +1,57 @@
+# ---------------------------------------------------------------------
+#  Configuração do projeto Quarto (website + apresentações revealjs).
+#  Edite os campos marcados com  <<< EDITAR  para adaptar a qualquer tema.
+# ---------------------------------------------------------------------
+
+project:
+  type: website
+  output-dir: _site
+  render:
+    - index.qmd
+    - Notas/*.qmd
+    - Avaliacoes/*.qmd
+
+# Bibliografia compartilhada por todas as páginas do site (aulas e
+# avaliações). Cite com @chave no texto; veja o exemplo em
+# Notas/Aula01Exemplo.qmd. Edite references.bib com suas fontes.
+bibliography: references.bib
+
+website:
+  title: "Nome da Disciplina"            # <<< EDITAR
+  description: "Notas de aula — subtítulo do curso"   # <<< EDITAR
+  reader-mode: true
+  navbar:
+    background: "#1F3A5F"                 # <<< EDITAR (igual à $cor-primaria do .scss)
+    foreground: "#FFFFFF"
+    title: "Título Curto"                # <<< EDITAR
+    left:
+      - text: "Início"
+        href: index.qmd
+      - text: "Notas de Aula"
+        menu:
+          # Adicione/edite uma entrada por aula:
+          - text: "0 · Plano de Ensino"
+            href: Notas/Aula00PlanoEnsino.qmd
+          - text: "1 · Aula Exemplo (modelo)"
+            href: Notas/Aula01Exemplo.qmd
+      - text: "Avaliações"
+        menu:
+          # Adicione/edite uma entrada por avaliação:
+          - text: "1 · Avaliação Exemplo (modelo)"
+            href: Avaliacoes/Avaliacao01Exemplo.qmd
+  page-footer:
+    border: false
+    left: "Nome da Disciplina"           # <<< EDITAR
+    center: "Instituição · Unidade"      # <<< EDITAR
+    right: "Prof. Nome do Docente"       # <<< EDITAR
+
+format:
+  html:
+    theme: [cosmo, TemaModelo.scss]
+    toc: true
+    toc-title: "Nesta página"
+    page-layout: article
+    lang: pt-BR
+
+# Os decks revealjs definem o próprio `format:` no cabeçalho de cada .qmd;
+# este bloco aplica-se apenas às páginas HTML (ex.: index).

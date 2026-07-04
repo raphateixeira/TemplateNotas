@@ -1,0 +1,24 @@
+---
+title: "Nome da Disciplina"
+subtitle: "Subtítulo do curso"
+institute: "Instituição"
+author: "Prof. Nome do Docente"
+date: ""
+format: 
+  html:
+    page-layout: article
+---
+
+<!-- Portal do projeto. Cada item aponta para um deck em Notas/.
+     Duplique as linhas conforme adicionar aulas. -->
+
+Notas de aula — descreva aqui, em uma frase, o escopo e a ferramenta usada.
+
+* Aula 0 - [Plano de Ensino](Notas/Aula00PlanoEnsino.qmd)
+* Aula 1 - [Aula Exemplo (modelo de recursos)](Notas/Aula01Exemplo.qmd)
+<!-- * Aula 2 - [Título](Notas/Aula02Titulo.qmd) -->
+
+## Avaliações
+
+* Avaliação 1 - [Avaliação Exemplo (modelo)](Avaliacoes/Avaliacao01Exemplo.qmd)
+<!-- * Avaliação 2 - [Título](Avaliacoes/Avaliacao02Titulo.qmd) -->
