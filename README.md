@@ -7,18 +7,21 @@ e adapte para qualquer tema.
 ## Estrutura
 
 ```
-Template/
+.
 ├── _quarto.yml              configuração do site, navbar e bibliografia
-├── TemaModelo.scss          tema visual (cores/fontes no topo do arquivo)
+├── TemaModelo.scss          tema visual genérico (cores/fontes no topo do arquivo)
+├── TemaUFPA.scss            tema pronto com identidade visual da UFPA (ver seção abaixo)
 ├── index.qmd                portal com os links das aulas e avaliações
 ├── references.bib           bibliografia citável com @chave nos .qmd
 ├── .github/workflows/
 │   └── publish.yml            CI: renderiza e publica em GitHub Pages
 ├── Notas/
 │   ├── Aula00PlanoEnsino.qmd   molde do plano de ensino
-│   ├── Aula01Exemplo.qmd       aula-exemplo comentada (todos os recursos)
+│   ├── Aula01Exemplo.qmd       aula-exemplo comentada (tema genérico, todos os recursos)
+│   ├── AulaExemploUFPA.qmd     aula-exemplo com o tema UFPA já aplicado
 │   └── imgs/
-│       ├── Logo.png            logotipo da capa
+│       ├── UFPA.png            logotipo da capa (tema genérico)
+│       ├── ufpa-colorido.png, ufpa-preto.png, ufpa-branco.png   brasão UFPA (tema UFPA)
 │       └── tikz/
 │           └── ExemploDiagrama.tikz   esquema em TikZ
 └── Avaliacoes/
@@ -30,7 +33,7 @@ Template/
 1. **Identidade visual:** edite as variáveis no topo de `TemaModelo.scss`
    (`$cor-primaria`, `$cor-secundaria`, ...). Atualize a cor da navbar em
    `_quarto.yml` para o mesmo valor da cor primária.
-2. **Logo:** substitua `Notas/imgs/Logo.png`.
+2. **Logo:** substitua `Notas/imgs/UFPA.png`.
 3. **Metadados:** troque os campos `<<< EDITAR` em `_quarto.yml` e os
    cabeçalhos YAML (`title`, `subtitle`, `institute`, `author`) de cada `.qmd`.
 4. **Aulas:** copie `Aula01Exemplo.qmd`, renomeie, escreva o conteúdo e
@@ -44,6 +47,23 @@ Template/
    renderiza e publica o site em GitHub Pages a cada push em `main`.
    Após o primeiro run, ative em *Settings > Pages > Source > Deploy
    from branch > gh-pages*.
+
+## Variante com identidade visual da UFPA
+
+`TemaUFPA.scss` + `Notas/AulaExemploUFPA.qmd` são um tema revealjs já
+pronto e testado, com a identidade visual da UFPA: subtítulo em
+vermelho institucional, brasão pequeno no topo da capa (via
+`data-background-image`, não empurra o título para baixo), afiliação
+(campus) em preto abaixo do nome do docente, slide de encerramento com
+o brasão colorido. Resultado de uma rodada de experimentação de design
+(antigo repositório `TesteTemplateAula`, hoje descontinuado — este é o
+tema final escolhido).
+
+Para usar em uma disciplina nova: copie `Notas/AulaExemploUFPA.qmd`,
+troque `theme: [simple, ../TemaUFPA.scss]` para apontar ao `TemaUFPA.scss`
+copiado junto, e adapte o conteúdo. Diferente do `TemaModelo.scss`, as
+cores da UFPA em `TemaUFPA.scss` não são pensadas para reidentificação
+fácil por outra instituição — é um tema específico, não um modelo genérico.
 
 ## Recursos demonstrados em `Aula01Exemplo.qmd`
 

@@ -1,8 +1,8 @@
 ---
 title: "Nome da Disciplina"
 subtitle: "Subtítulo do curso"
-institute: "Instituição"
-author: "Prof. Nome do Docente"
+institute: "Universidade Federal do Pará"
+author: "Prof. Dr. Raphael Teixeira"
 date: ""
 format: 
   html:

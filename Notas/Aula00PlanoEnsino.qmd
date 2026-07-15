@@ -14,7 +14,7 @@ format:
     footer: " "
     center: true
     title-slide-attributes:
-      data-background-image: "imgs/Logo.png"
+      data-background-image: "imgs/UFPA.png"
       data-background-size: "100px"
       data-background-position: "top 40px center"
 ---

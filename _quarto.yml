@@ -34,6 +34,8 @@ website:
             href: Notas/Aula00PlanoEnsino.qmd
           - text: "1 · Aula Exemplo (modelo)"
             href: Notas/Aula01Exemplo.qmd
+          - text: "2 · Aula Exemplo (tema UFPA)"
+            href: Notas/AulaExemploUFPA.qmd
       - text: "Avaliações"
         menu:
           # Adicione/edite uma entrada por avaliação:

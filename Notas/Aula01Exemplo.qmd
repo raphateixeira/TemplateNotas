@@ -19,7 +19,7 @@ format:
     footer: " "
     center: true
     title-slide-attributes:
-      data-background-image: "imgs/Logo.png"
+      data-background-image: "imgs/UFPA.png"
       data-background-size: "100px"
       data-background-position: "top 40px center"
 engine: knitr                     # necessário para os chunks {tikz}
@@ -167,7 +167,7 @@ Diagramas e esquemas ficam em `imgs/tikz/*.tikz` e entram por `\input`.
 Para **gráficos de dados**, prefira gerar a imagem na própria linguagem
 (Matplotlib, etc.) e inseri-la, ou cole uma imagem em `imgs/`:
 
-![Legenda da figura](imgs/Logo.png){width="30%" fig-align="center"}
+![Legenda da figura](imgs/UFPA.png){width="30%" fig-align="center"}
 
 ---
 

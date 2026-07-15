@@ -7,8 +7,8 @@
 # =====================================================================
 title: "Avaliação 1 — Título"
 subtitle: "Nome da Disciplina"
-institute: "Instituição"
-author: "Prof. Nome do Docente"
+institute: "Universidade Federal do Pará"
+author: "Prof. Dr. Raphael Teixeira"
 date: ""
 format:
   html:

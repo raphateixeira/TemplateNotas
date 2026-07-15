@@ -1,0 +1,198 @@
+---
+title: "Sistemas Massa-Mola-Amortecedor"
+subtitle: "Modelagem, Resposta Dinâmica e Aplicações"
+author:
+  - name: Prof. Dr. Raphael Teixeira
+    email: raphaelbt@ufpa.br
+    affiliations: UFPA-CAMTUC-FEE
+format:
+  revealjs:
+    theme: [simple, ../TemaUFPA.scss]
+    slide-number: true
+    transition: fade
+    title-slide-attributes:
+      data-background-image: "imgs/ufpa-colorido.png"
+      data-background-size: "70px"
+      data-background-position: "top 30px center"
+execute:
+  echo: true
+include-after-body:
+  text: |
+    <script>
+    (function() {
+      function removerCentralizacaoAutomatica() {
+        // O Quarto adiciona a classe "center" às seções de parte
+        // (# Título {.section-slide}) por padrão; removê-la para que
+        // o alinhamento definido em tema.scss (mais próximo do topo)
+        // não seja sobrescrito pelo posicionamento nativo do Reveal.js.
+        document.querySelectorAll('.reveal .slides section.section-slide.center')
+          .forEach(function(el) { el.classList.remove('center'); });
+      }
+      function marcarCapaSemNumero() {
+        var capa = document.getElementById('title-slide');
+        if (capa && !capa.hasAttribute('data-visibility')) {
+          capa.setAttribute('data-visibility', 'uncounted');
+        }
+        if (typeof Reveal !== 'undefined' && Reveal.sync) {
+          Reveal.sync();
+        }
+      }
+      function atualizarVisibilidadeNumero() {
+        var numero = document.querySelector('.reveal .slide-number');
+        if (!numero || typeof Reveal === 'undefined') return;
+        var atual = Reveal.getCurrentSlide && Reveal.getCurrentSlide();
+        numero.style.display = (atual && atual.id === 'title-slide') ? 'none' : '';
+      }
+      function iniciar() {
+        removerCentralizacaoAutomatica();
+        marcarCapaSemNumero();
+        atualizarVisibilidadeNumero();
+      }
+      if (typeof Reveal !== 'undefined') {
+        Reveal.on('ready', iniciar);
+        Reveal.on('slidechanged', atualizarVisibilidadeNumero);
+        if (Reveal.isReady && Reveal.isReady()) iniciar();
+      } else {
+        document.addEventListener('DOMContentLoaded', iniciar);
+      }
+    })();
+    </script>
+---
+
+## Objetivos da Aula
+
+- Compreender o modelo massa-mola-amortecedor
+- Relacionar os parâmetros físicos com a resposta no tempo
+- Implementar a simulação do sistema em código
+- Reconhecer os diferentes regimes de amortecimento
+
+# Modelagem Teórica {.section-slide}
+
+## Função de Transferência
+
+$$ G(s) = \frac{Y(s)}{U(s)} = \frac{1}{ms^2 + bs + k} $$
+
+Relaciona a força de entrada $U(s)$ ao deslocamento de saída $Y(s)$.
+
+## Parâmetros do Sistema
+
+Clique para revelar cada parâmetro:
+
+::: {.incremental}
+- $m$ — massa do sistema (kg)
+- $b$ — coeficiente de amortecimento (N·s/m)
+- $k$ — rigidez da mola (N/m)
+- $\omega_n = \sqrt{k/m}$ — frequência natural
+- $\zeta = b / (2\sqrt{mk})$ — fator de amortecimento
+:::
+
+# Implementação {.section-slide}
+
+## Simulação em Python
+
+::::: {.columns}
+:::: {.column width="45%"}
+Envelope de decaimento exponencial da resposta livre:
+
+$$ x(t) \propto e^{-\zeta \omega_n t} $$
+
+O código ao lado calcula e plota o envelope para três valores de $\zeta$.
+::::
+
+:::: {.column width="55%"}
+```{python}
+#| echo: true
+#| fig-height: 4.5
+import numpy as np
+import matplotlib.pyplot as plt
+
+t = np.linspace(0, 5, 300)
+fig, ax = plt.subplots()
+for zeta, cor in zip([0.15, 0.4, 0.8], ["#1B365D", "#4A6FA5", "#6C757D"]):
+    ax.plot(t, np.exp(-zeta * t), color=cor, label=f"ζ = {zeta}")
+ax.set_xlabel("tempo (s)")
+ax.set_ylabel("amplitude")
+ax.legend()
+plt.tight_layout()
+plt.show()
+```
+::::
+:::::
+
+## Código com Saída em Coluna {.small-slide}
+
+Uso de `#| output-location: column` para colocar a saída ao lado do código.
+
+```{python}
+#| output-location: column
+import numpy as np
+
+def parametros(m, b, k):
+    wn = np.sqrt(k / m)
+    zeta = b / (2 * np.sqrt(m * k))
+    return round(wn, 3), round(zeta, 3)
+
+wn, zeta = parametros(m=2.0, b=1.2, k=18.0)
+print(f"ωn = {wn} rad/s")
+print(f"ζ  = {zeta}")
+```
+
+# Tipos de Resposta {.section-slide}
+
+## Tabela Comparativa
+
+| Regime                    | Fator $\zeta$   | Comportamento                                     |
+|----------------------------|:---------------:|----------------------------------------------------|
+| Subamortecido              | $\zeta < 1$      | Oscila com amplitude decrescente                    |
+| Criticamente amortecido    | $\zeta = 1$      | Retorna ao equilíbrio o mais rápido, sem oscilar    |
+| Superamortecido            | $\zeta > 1$      | Retorna lentamente ao equilíbrio, sem oscilar       |
+
+## Nota de Aula {.quote-slide}
+
+> "Todo sistema mecânico real possui amortecimento — a pergunta nunca é
+> 'se', mas 'quanto'."
+
+— Nota de aula
+
+# Recursos do Tema {.section-slide}
+
+## Blocos Personalizados
+
+::: {.callout-example}
+Um sistema com $m = 2\text{ kg}$, $b = 1.2\text{ N·s/m}$ e $k = 18\text{ N/m}$ tem $\zeta \approx 0{,}14$ — regime subamortecido.
+:::
+
+::: {.callout-question}
+O que acontece com o tempo de acomodação quando $\zeta$ se aproxima de 1?
+:::
+
+::: {.callout-insight}
+O tempo de acomodação é mínimo próximo de $\zeta = 1$ (amortecimento crítico) — é o mais rápido retorno ao equilíbrio sem oscilação.
+:::
+
+## Ênfases e Utilitários {.small-slide}
+
+| Sintaxe | Resultado |
+|---------|-----------|
+| `[texto]{.alert}` | [atenção redobrada]{.alert} |
+| `[texto]{.highlight}` | [resultado-chave]{.highlight} |
+| `[texto]{.note}` | [observação lateral]{.note} |
+| `[texto]{.warning}` | [cuidado aqui]{.warning} |
+
+# Encerramento {.section-slide}
+
+## Resumo
+
+- O sistema massa-mola-amortecedor é descrito por uma equação diferencial de segunda ordem
+- O fator de amortecimento $\zeta$ determina o regime da resposta
+- O mesmo modelo se aplica a diversos sistemas de engenharia reais
+
+## Encerramento {.encerramento}
+
+![](imgs/ufpa-colorido.png){.encerramento-logo width="80px"}
+
+Prof. Dr. Raphael Teixeira
+
+Universidade Federal do Pará
+
+raphaelbt@ufpa.br
