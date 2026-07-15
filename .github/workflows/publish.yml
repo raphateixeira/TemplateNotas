@@ -26,8 +26,8 @@ jobs:
       - name: Instalar dependência de sistema (ImageMagick, para o pacote R magick)
         run: sudo apt-get update && sudo apt-get install -y libmagick++-dev
 
-      - name: Instalar pacote R magick (conversão PDF→PNG dos diagramas TikZ)
-        run: install.packages("magick")
+      - name: Instalar pacotes R (magick para PDF→PNG dos diagramas TikZ; knitr/rmarkdown exigidos pelo engine de chunks R do Quarto)
+        run: install.packages(c("magick", "knitr", "rmarkdown"))
         shell: Rscript {0}
 
       - name: Configurar Quarto
