@@ -1,0 +1,233 @@
+[
+  {
+    "objectID": "Avaliacoes/Avaliacao01Exemplo.html",
+    "href": "Avaliacoes/Avaliacao01Exemplo.html",
+    "title": "Avaliação 1 — Título",
+    "section": "",
+    "text": "Duração: 00 minutos.\nConsulta: permitida/não permitida a…\nEntrega: formato e prazo."
+  },
+  {
+    "objectID": "Avaliacoes/Avaliacao01Exemplo.html#instruções",
+    "href": "Avaliacoes/Avaliacao01Exemplo.html#instruções",
+    "title": "Avaliação 1 — Título",
+    "section": "",
+    "text": "Duração: 00 minutos.\nConsulta: permitida/não permitida a…\nEntrega: formato e prazo."
+  },
+  {
+    "objectID": "Avaliacoes/Avaliacao01Exemplo.html#questões",
+    "href": "Avaliacoes/Avaliacao01Exemplo.html#questões",
+    "title": "Avaliação 1 — Título",
+    "section": "Questões",
+    "text": "Questões\n\n(peso 0,0) Enunciado da primeira questão.\n(peso 0,0) Enunciado da segunda questão.\n(peso 0,0) Enunciado da terceira questão, com aplicação prática."
+  },
+  {
+    "objectID": "Avaliacoes/Avaliacao01Exemplo.html#critérios-de-avaliação",
+    "href": "Avaliacoes/Avaliacao01Exemplo.html#critérios-de-avaliação",
+    "title": "Avaliação 1 — Título",
+    "section": "Critérios de avaliação",
+    "text": "Critérios de avaliação\n\n\n\nQuestão\nPeso\nCritério\n\n\n\n\n1\n0,0\ndescreva o que será avaliado\n\n\n2\n0,0\ndescreva o que será avaliado\n\n\n3\n0,0\ndescreva o que será avaliado"
+  },
+  {
+    "objectID": "Notas/Aula01Exemplo.html#estrutura-de-um-slide",
+    "href": "Notas/Aula01Exemplo.html#estrutura-de-um-slide",
+    "title": "Título da Aula",
+    "section": "Estrutura de um slide",
+    "text": "Estrutura de um slide\nCada slide começa com ##. Separe slides com --- em linha própria.\n\nTexto direto e impessoal (evite a primeira pessoa).\nPouco texto por slide; uma ideia central por slide.\nListas curtas, como esta.\n\n\n\n\n\n\n\nNote\n\n\nCallout de nota. Use para observações; não abuse — no máximo um por slide."
+  },
+  {
+    "objectID": "Notas/Aula01Exemplo.html#duas-colunas",
+    "href": "Notas/Aula01Exemplo.html#duas-colunas",
+    "title": "Título da Aula",
+    "section": "Duas colunas",
+    "text": "Duas colunas\n\n\nA coluna da esquerda recebe a formulação ou o texto.\n\\[f(x) = \\int_a^b g(t)\\,dt\\]\n\nA coluna da direita recebe a figura, o resultado ou um segundo bloco.\n\nItem A\nItem B\n\n\n\n\n\n\n\n\nImportant\n\n\nControle o volume de conteúdo: texto ou código em excesso vaza do slide. Prefira dividir em dois slides a encolher demais a fonte."
+  },
+  {
+    "objectID": "Notas/Aula01Exemplo.html#matemática",
+    "href": "Notas/Aula01Exemplo.html#matemática",
+    "title": "Título da Aula",
+    "section": "Matemática",
+    "text": "Matemática\nEquações em destaque com $$ ... $$:\n\\[\\frac{d}{dx}\\left[\\,x^n\\,\\right] = n\\,x^{n-1}\\]\nE em linha, com $ ... $: a condição \\(|g'(x^{*})| &lt; 1\\) garante convergência local.\nSistemas e matrizes:\n\\[A = \\begin{bmatrix} a_{11} & a_{12} \\\\ a_{21} & a_{22} \\end{bmatrix}, \\qquad A\\mathbf{x} = \\mathbf{b}\\]"
+  },
+  {
+    "objectID": "Notas/Aula01Exemplo.html#exemplo-passo-a-passo",
+    "href": "Notas/Aula01Exemplo.html#exemplo-passo-a-passo",
+    "title": "Título da Aula",
+    "section": "Exemplo passo a passo",
+    "text": "Exemplo passo a passo\nProblema. Enuncie o exemplo em uma frase.\nPasso 1. Primeira manipulação:\n\\[x_{k+1} = x_k - \\frac{f(x_k)}{f'(x_k)}\\]\nPasso 2. Substituição dos valores e resultado:\n\\[x_1 = 2 - \\frac{f(2)}{f'(2)} = 2{,}0945\\ldots\\]"
+  },
+  {
+    "objectID": "Notas/Aula01Exemplo.html#citações-bibliográficas",
+    "href": "Notas/Aula01Exemplo.html#citações-bibliográficas",
+    "title": "Título da Aula",
+    "section": "Citações bibliográficas",
+    "text": "Citações bibliográficas\nCite uma fonte listada em references.bib com @chave: o método iterativo do exemplo anterior remonta a Newton (1687).\nVárias citações juntas: (Newton 1687; Boyce and DiPrima 2020).\n\n\n\n\n\n\nTip\n\n\nA lista completa das referências citadas é gerada automaticamente no slide ## Referências, ao final da aula."
+  },
+  {
+    "objectID": "Notas/Aula01Exemplo.html#código-abas-para-várias-linguagens",
+    "href": "Notas/Aula01Exemplo.html#código-abas-para-várias-linguagens",
+    "title": "Título da Aula",
+    "section": "Código (abas para várias linguagens)",
+    "text": "Código (abas para várias linguagens)\n\nPythonMATLAB\n\n\nimport numpy as np\n\ndef newton(f, df, x0, tol=1e-12, nmax=50):\n    x = x0\n    for _ in range(nmax):\n        x_new = x - f(x) / df(x)\n        if abs(x_new - x) &lt; tol:\n            return x_new\n        x = x_new\n    return x\n\n\nfunction x = newton(f, df, x0, tol, nmax)\n    x = x0;\n    for k = 1:nmax\n        x_new = x - f(x) / df(x);\n        if abs(x_new - x) &lt; tol, x = x_new; return; end\n        x = x_new;\n    end\nend\n\n\n\n\n\n\n\n\n\nTip\n\n\nPara uma única linguagem, omita o panel-tabset e use apenas um bloco ```python."
+  },
+  {
+    "objectID": "Notas/Aula01Exemplo.html#figura-em-tikz",
+    "href": "Notas/Aula01Exemplo.html#figura-em-tikz",
+    "title": "Título da Aula",
+    "section": "Figura em TikZ",
+    "text": "Figura em TikZ\nDiagramas e esquemas ficam em imgs/tikz/*.tikz e entram por \\input. Atenção: nos chunks {tikz}, as opções começam com %| (comentário LaTeX), nunca #|."
+  },
+  {
+    "objectID": "Notas/Aula01Exemplo.html#figura-de-dados-gerada-por-código",
+    "href": "Notas/Aula01Exemplo.html#figura-de-dados-gerada-por-código",
+    "title": "Título da Aula",
+    "section": "Figura de dados (gerada por código)",
+    "text": "Figura de dados (gerada por código)\nPara gráficos de dados, prefira gerar a imagem na própria linguagem (Matplotlib, etc.) e inseri-la, ou cole uma imagem em imgs/:\n\nLegenda da figura"
+  },
+  {
+    "objectID": "Notas/Aula01Exemplo.html#tabela",
+    "href": "Notas/Aula01Exemplo.html#tabela",
+    "title": "Título da Aula",
+    "section": "Tabela",
+    "text": "Tabela\n\n\n\nMétodo\nOrdem\nCusto\n\n\n\n\nA\n1\nbaixo\n\n\nB\n2\nmédio\n\n\nC\n4\nalto"
+  },
+  {
+    "objectID": "Notas/Aula01Exemplo.html#exercícios",
+    "href": "Notas/Aula01Exemplo.html#exercícios",
+    "title": "Título da Aula",
+    "section": "Exercícios",
+    "text": "Exercícios\n\nPrimeiro exercício proposto.\nSegundo exercício, com aplicação.\nTerceiro exercício, de implementação."
+  },
+  {
+    "objectID": "Notas/Aula01Exemplo.html#referências",
+    "href": "Notas/Aula01Exemplo.html#referências",
+    "title": "Título da Aula",
+    "section": "Referências",
+    "text": "Referências\n\n\nBoyce, William E., and Richard C. DiPrima. 2020. Equações Diferenciais Elementares e Problemas de Valores de Contorno. 11th ed. LTC.\n\n\nNewton, Isaac. 1687. “Philosophiæ Naturalis Principia Mathematica.” Royal Society."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Nome da Disciplina",
+    "section": "",
+    "text": "Notas de aula — descreva aqui, em uma frase, o escopo e a ferramenta usada."
+  },
+  {
+    "objectID": "index.html#avaliações",
+    "href": "index.html#avaliações",
+    "title": "Nome da Disciplina",
+    "section": "Avaliações",
+    "text": "Avaliações\n\nAvaliação 1 - Avaliação Exemplo (modelo)"
+  },
+  {
+    "objectID": "Notas/Aula00PlanoEnsino.html#identificação",
+    "href": "Notas/Aula00PlanoEnsino.html#identificação",
+    "title": "Plano de Ensino",
+    "section": "Identificação",
+    "text": "Identificação\n\n\n\nCurso / nível\nCarga horária: 00 horas\nPré-requisitos: …\nFerramentas: …\n\n\nEmenta: descreva aqui os grandes temas da disciplina em um parágrafo."
+  },
+  {
+    "objectID": "Notas/Aula00PlanoEnsino.html#objetivos",
+    "href": "Notas/Aula00PlanoEnsino.html#objetivos",
+    "title": "Plano de Ensino",
+    "section": "Objetivos",
+    "text": "Objetivos\n\nObjetivo geral da disciplina.\nCompetência 1.\nCompetência 2.\nCompetência 3.\n\n\n\n\n\n\n\nNote\n\n\nUse callouts com moderação para destacar a intenção pedagógica de cada unidade."
+  },
+  {
+    "objectID": "Notas/Aula00PlanoEnsino.html#bibliografia",
+    "href": "Notas/Aula00PlanoEnsino.html#bibliografia",
+    "title": "Plano de Ensino",
+    "section": "Bibliografia",
+    "text": "Bibliografia\n\nLivro 1: AUTOR, A. Título. Edição. Editora, ano.\nLivro 2: AUTOR, B. Título. Edição. Editora, ano.\nLivro 3: AUTOR, C. Título. Edição. Editora, ano."
+  },
+  {
+    "objectID": "Notas/Aula00PlanoEnsino.html#avaliação",
+    "href": "Notas/Aula00PlanoEnsino.html#avaliação",
+    "title": "Plano de Ensino",
+    "section": "Avaliação",
+    "text": "Avaliação\n\nAvaliação 1 — peso: descrição;\nAvaliação 2 — peso: descrição;\nTrabalho/Projeto — peso: descrição.\n\n\\[N_f = \\text{(fórmula da nota final)}\\]"
+  },
+  {
+    "objectID": "Notas/Aula00PlanoEnsino.html#cronograma",
+    "href": "Notas/Aula00PlanoEnsino.html#cronograma",
+    "title": "Plano de Ensino",
+    "section": "Cronograma",
+    "text": "Cronograma\n\n\n\nSemanas\nConteúdo\n\n\n\n\n1–2\nUnidade I\n\n\n3–5\nUnidade II\n\n\n6\nAvaliação 1\n\n\n7–10\nUnidade III\n\n\n…\n…"
+  },
+  {
+    "objectID": "Notas/AulaExemploUFPA.html#objetivos-da-aula",
+    "href": "Notas/AulaExemploUFPA.html#objetivos-da-aula",
+    "title": "Sistemas Massa-Mola-Amortecedor",
+    "section": "Objetivos da Aula",
+    "text": "Objetivos da Aula\n\nCompreender o modelo massa-mola-amortecedor\nRelacionar os parâmetros físicos com a resposta no tempo\nImplementar a simulação do sistema em código\nReconhecer os diferentes regimes de amortecimento"
+  },
+  {
+    "objectID": "Notas/AulaExemploUFPA.html#função-de-transferência",
+    "href": "Notas/AulaExemploUFPA.html#função-de-transferência",
+    "title": "Sistemas Massa-Mola-Amortecedor",
+    "section": "Função de Transferência",
+    "text": "Função de Transferência\n\\[ G(s) = \\frac{Y(s)}{U(s)} = \\frac{1}{ms^2 + bs + k} \\]\nRelaciona a força de entrada \\(U(s)\\) ao deslocamento de saída \\(Y(s)\\)."
+  },
+  {
+    "objectID": "Notas/AulaExemploUFPA.html#parâmetros-do-sistema",
+    "href": "Notas/AulaExemploUFPA.html#parâmetros-do-sistema",
+    "title": "Sistemas Massa-Mola-Amortecedor",
+    "section": "Parâmetros do Sistema",
+    "text": "Parâmetros do Sistema\nClique para revelar cada parâmetro:\n\n\\(m\\) — massa do sistema (kg)\n\\(b\\) — coeficiente de amortecimento (N·s/m)\n\\(k\\) — rigidez da mola (N/m)\n\\(\\omega_n = \\sqrt{k/m}\\) — frequência natural\n\\(\\zeta = b / (2\\sqrt{mk})\\) — fator de amortecimento"
+  },
+  {
+    "objectID": "Notas/AulaExemploUFPA.html#simulação-em-python",
+    "href": "Notas/AulaExemploUFPA.html#simulação-em-python",
+    "title": "Sistemas Massa-Mola-Amortecedor",
+    "section": "Simulação em Python",
+    "text": "Simulação em Python\n\n\nEnvelope de decaimento exponencial da resposta livre:\n\\[ x(t) \\propto e^{-\\zeta \\omega_n t} \\]\nO código ao lado calcula e plota o envelope para três valores de \\(\\zeta\\).\n\n\nimport numpy as np\nimport matplotlib.pyplot as plt\n\nt = np.linspace(0, 5, 300)\nfig, ax = plt.subplots()\nfor zeta, cor in zip([0.15, 0.4, 0.8], [\"#1B365D\", \"#4A6FA5\", \"#6C757D\"]):\n    ax.plot(t, np.exp(-zeta * t), color=cor, label=f\"ζ = {zeta}\")\nax.set_xlabel(\"tempo (s)\")\nax.set_ylabel(\"amplitude\")\nax.legend()\nplt.tight_layout()\nplt.show()"
+  },
+  {
+    "objectID": "Notas/AulaExemploUFPA.html#código-com-saída-em-coluna",
+    "href": "Notas/AulaExemploUFPA.html#código-com-saída-em-coluna",
+    "title": "Sistemas Massa-Mola-Amortecedor",
+    "section": "Código com Saída em Coluna",
+    "text": "Código com Saída em Coluna\nUso de #| output-location: column para colocar a saída ao lado do código.\n\n\nimport numpy as np\n\ndef parametros(m, b, k):\n    wn = np.sqrt(k / m)\n    zeta = b / (2 * np.sqrt(m * k))\n    return round(wn, 3), round(zeta, 3)\n\nwn, zeta = parametros(m=2.0, b=1.2, k=18.0)\nprint(f\"ωn = {wn} rad/s\")\nprint(f\"ζ  = {zeta}\")\n\n\nωn = 3.0 rad/s\nζ  = 0.1"
+  },
+  {
+    "objectID": "Notas/AulaExemploUFPA.html#tabela-comparativa",
+    "href": "Notas/AulaExemploUFPA.html#tabela-comparativa",
+    "title": "Sistemas Massa-Mola-Amortecedor",
+    "section": "Tabela Comparativa",
+    "text": "Tabela Comparativa\n\n\n\n\n\n\n\n\nRegime\nFator \\(\\zeta\\)\nComportamento\n\n\n\n\nSubamortecido\n\\(\\zeta &lt; 1\\)\nOscila com amplitude decrescente\n\n\nCriticamente amortecido\n\\(\\zeta = 1\\)\nRetorna ao equilíbrio o mais rápido, sem oscilar\n\n\nSuperamortecido\n\\(\\zeta &gt; 1\\)\nRetorna lentamente ao equilíbrio, sem oscilar"
+  },
+  {
+    "objectID": "Notas/AulaExemploUFPA.html#nota-de-aula",
+    "href": "Notas/AulaExemploUFPA.html#nota-de-aula",
+    "title": "Sistemas Massa-Mola-Amortecedor",
+    "section": "Nota de Aula",
+    "text": "Nota de Aula\n\n“Todo sistema mecânico real possui amortecimento — a pergunta nunca é ‘se’, mas ‘quanto’.”\n\n— Nota de aula"
+  },
+  {
+    "objectID": "Notas/AulaExemploUFPA.html#blocos-personalizados",
+    "href": "Notas/AulaExemploUFPA.html#blocos-personalizados",
+    "title": "Sistemas Massa-Mola-Amortecedor",
+    "section": "Blocos Personalizados",
+    "text": "Blocos Personalizados\n\nUm sistema com \\(m = 2\\text{ kg}\\), \\(b = 1.2\\text{ N·s/m}\\) e \\(k = 18\\text{ N/m}\\) tem \\(\\zeta \\approx 0{,}14\\) — regime subamortecido.\n\n\nO que acontece com o tempo de acomodação quando \\(\\zeta\\) se aproxima de 1?\n\n\nO tempo de acomodação é mínimo próximo de \\(\\zeta = 1\\) (amortecimento crítico) — é o mais rápido retorno ao equilíbrio sem oscilação."
+  },
+  {
+    "objectID": "Notas/AulaExemploUFPA.html#ênfases-e-utilitários",
+    "href": "Notas/AulaExemploUFPA.html#ênfases-e-utilitários",
+    "title": "Sistemas Massa-Mola-Amortecedor",
+    "section": "Ênfases e Utilitários",
+    "text": "Ênfases e Utilitários\n\n\n\nSintaxe\nResultado\n\n\n\n\n[texto]{.alert}\natenção redobrada\n\n\n[texto]{.highlight}\nresultado-chave\n\n\n[texto]{.note}\nobservação lateral\n\n\n[texto]{.warning}\ncuidado aqui"
+  },
+  {
+    "objectID": "Notas/AulaExemploUFPA.html#resumo",
+    "href": "Notas/AulaExemploUFPA.html#resumo",
+    "title": "Sistemas Massa-Mola-Amortecedor",
+    "section": "Resumo",
+    "text": "Resumo\n\nO sistema massa-mola-amortecedor é descrito por uma equação diferencial de segunda ordem\nO fator de amortecimento \\(\\zeta\\) determina o regime da resposta\nO mesmo modelo se aplica a diversos sistemas de engenharia reais"
+  },
+  {
+    "objectID": "Notas/AulaExemploUFPA.html#encerramento-1",
+    "href": "Notas/AulaExemploUFPA.html#encerramento-1",
+    "title": "Sistemas Massa-Mola-Amortecedor",
+    "section": "Encerramento",
+    "text": "Encerramento\n\nProf. Dr. Raphael Teixeira\nUniversidade Federal do Pará\nraphaelbt@ufpa.br"
+  }
+]
