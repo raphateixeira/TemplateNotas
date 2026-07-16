@@ -7,13 +7,13 @@ author:
     affiliations: UFPA-CAMTUC-FEE
 format:
   revealjs:
-    theme: [simple, ../TemaUFPA.scss]
+    theme: [simple, ../tema.scss]
     slide-number: true
     transition: fade
     title-slide-attributes:
       data-background-image: "imgs/ufpa-colorido.png"
-      data-background-size: "70px"
-      data-background-position: "top 30px center"
+      data-background-size: "84px"
+      data-background-position: "top 45px center"
 execute:
   echo: true
 include-after-body:
