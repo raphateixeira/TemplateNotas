@@ -98,7 +98,7 @@
     code span.vs { color: #20794d; } /* VerbatimString */
     code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
-  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-59bd7b547fe2c8b9bf833a748a43258e.css">
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-9ae747d70a7046cecabc6d49195825eb.css">
   <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -195,7 +195,7 @@
   <div class="reveal">
     <div class="slides">
 
-<section id="title-slide" data-background-image="imgs/ufpa-colorido.png" data-background-position="top 30px center" data-background-size="70px" class="quarto-title-block center">
+<section id="title-slide" data-background-image="imgs/ufpa-colorido.png" data-background-position="top 45px center" data-background-size="84px" class="quarto-title-block center">
   <h1 class="title">Sistemas Massa-Mola-Amortecedor</h1>
   <p class="subtitle">Modelagem, Resposta Dinâmica e Aplicações</p>
 
@@ -257,7 +257,7 @@ Prof.&nbsp;Dr.&nbsp;Raphael Teixeira
 <p><span class="math display">\[ x(t) \propto e^{-\zeta \omega_n t} \]</span></p>
 <p>O código ao lado calcula e plota o envelope para três valores de <span class="math inline">\(\zeta\)</span>.</p>
 </div><div class="column" style="width:55%;">
-<div id="d32ed723" class="cell" data-fig-height="4.5" data-execution_count="1">
+<div id="1925cce7" class="cell" data-fig-height="4.5" data-execution_count="1">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb1-2"><a></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb1-3"><a></a></span>
@@ -283,7 +283,7 @@ Prof.&nbsp;Dr.&nbsp;Raphael Teixeira
 <section id="código-com-saída-em-coluna" class="slide level2 small-slide">
 <h2>Código com Saída em Coluna</h2>
 <p>Uso de <code>#| output-location: column</code> para colocar a saída ao lado do código.</p>
-<div id="7c1d0bbe" class="cell columns column-output-location" data-execution_count="2">
+<div id="f240ab0f" class="cell columns column-output-location" data-execution_count="2">
 <div class="column">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb2-2"><a></a></span>
@@ -804,7 +804,7 @@ Prof.&nbsp;Dr.&nbsp;Raphael Teixeira
       function removerCentralizacaoAutomatica() {
         // O Quarto adiciona a classe "center" às seções de parte
         // (# Título {.section-slide}) por padrão; removê-la para que
-        // o alinhamento definido em tema.scss (mais próximo do topo)
+        // o alinhamento definido em TemaRTx.scss (mais próximo do topo)
         // não seja sobrescrito pelo posicionamento nativo do Reveal.js.
         document.querySelectorAll('.reveal .slides section.section-slide.center')
           .forEach(function(el) { el.classList.remove('center'); });
