@@ -7,7 +7,7 @@ author:
     affiliations: UFPA-CAMTUC-FEE
 format:
   revealjs:
-    theme: [simple, ../tema.scss]
+    theme: [simple, ../TemaRTx.scss]
     slide-number: true
     transition: fade
     title-slide-attributes:
@@ -23,7 +23,7 @@ include-after-body:
       function removerCentralizacaoAutomatica() {
         // O Quarto adiciona a classe "center" às seções de parte
         // (# Título {.section-slide}) por padrão; removê-la para que
-        // o alinhamento definido em tema.scss (mais próximo do topo)
+        // o alinhamento definido em TemaRTx.scss (mais próximo do topo)
         // não seja sobrescrito pelo posicionamento nativo do Reveal.js.
         document.querySelectorAll('.reveal .slides section.section-slide.center')
           .forEach(function(el) { el.classList.remove('center'); });
